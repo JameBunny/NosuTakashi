@@ -1,80 +1,77 @@
-// Mobile menu toggle
+// Mobile menu
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
-if (burger && menu){
-  burger.addEventListener('click', ()=> menu.classList.toggle('open'));
-}
+if (burger && menu){ burger.addEventListener('click', ()=> menu.classList.toggle('open')); }
 
-// Intersection reveal
+// Reveal on view
 const observer = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
-},{ threshold: .1 });
+},{ threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Language i18n
 const T = {
   en: {
-    nav_home: "Home",
-    nav_shop: "Shop",
-    nav_contact: "Contact",
-    nav_about: "About Us",
-    hero_title: "Welcome to my YouTube hub",
-    hero_sub: "Watch my latest videos, shop official merch, and get in touch — all in one place.",
-    hero_cta: "Visit the Shop",
-    latest_videos: "Latest videos",
-    shop_title: "Shop",
-    shop_sub: "Tap a product to flip image. Replace images & prices in HTML.",
-    contact_title: "Contact",
-    contact_sub: "For business inquiries and collaborations.",
-    contact_name: "Your name",
-    contact_email: "Email",
-    contact_msg: "Message",
-    contact_send: "Send Message",
-    about_title: "About Me",
-    about_body: "Creator, gamer, and community builder. This site showcases my content and products. Thank you for your support!",
-    footer: "© 2025 My Channel. All rights reserved."
+    nav_home:"Home", nav_shop:"Shop", nav_contact:"Contact", nav_about:"About Us",
+    hero_title:"I’m a gamer caster — watch, support, and collect my LINE stickers!",
+    hero_sub:"Catch my latest gaming videos and grab official goodies. Start with my LINE sticker sets below.",
+    hero_cta_shop:"Visit the Shop", hero_cta_stickers:"Get LINE Stickers",
+    latest_videos:"Latest videos",
+    highlight_title:"Featured: My LINE Stickers",
+    highlight_body:"Love my streams? Grab these official LINE sticker sets to use with your friends.",
+    browse_stickers:"Browse Stickers", coming_apparel:"Apparel (Coming Soon)",
+    shop_title:"Shop",
+    shop_sub_gamer:"Official LINE sticker sets are available now. Apparel and more gamer merch coming soon.",
+    tab_stickers:"LINE Stickers", tab_apparel:"Apparel (Soon)",
+    sticker_set1_title:"Sticker Set 1",
+    sticker_set2_title:"Sticker Set 2",
+    sticker_set_desc:"Use my signature reactions from the stream!",
+    sticker_set_desc2:"Fresh emotes and inside jokes from my channel.",
+    buy_on_line:"Buy on LINE Store", view_details:"View details",
+    coming_soon:"Coming Soon", apparel_tee:"Creator Tee",
+    notify_when_drop:"Merch drops soon — stay tuned!", notify_me:"Notify me (soon)",
+    footer:"© 2025 My Channel. All rights reserved."
   },
   th: {
-    nav_home: "หน้าแรก",
-    nav_shop: "ร้านค้า",
-    nav_contact: "ติดต่อ",
-    nav_about: "เกี่ยวกับเรา",
-    hero_title: "ยินดีต้อนรับสู่ศูนย์รวมช่อง YouTube ของฉัน",
-    hero_sub: "ชมวิดีโอล่าสุด ซื้อสินค้า และติดต่อเรา — ครบจบในที่เดียว",
-    hero_cta: "ไปที่ร้านค้า",
-    latest_videos: "วิดีโอล่าสุด",
-    shop_title: "ร้านค้า",
-    shop_sub: "แตะที่สินค้าเพื่อสลับภาพ แก้ไขรูปและราคาได้ในไฟล์ HTML",
-    contact_title: "ติดต่อ",
-    contact_sub: "สำหรับการติดต่อธุรกิจและคอลแลบ",
-    contact_name: "ชื่อของคุณ",
-    contact_email: "อีเมล",
-    contact_msg: "ข้อความ",
-    contact_send: "ส่งข้อความ",
-    about_title: "เกี่ยวกับฉัน",
-    about_body: "ครีเอเตอร์ เกมเมอร์ และผู้สร้างคอมมูนิตี้ เว็บไซต์นี้รวมคอนเทนต์และสินค้า ขอบคุณที่สนับสนุน!",
-    footer: "© 2025 ช่องของฉัน สงวนลิขสิทธิ์"
+    nav_home:"หน้าแรก", nav_shop:"ร้านค้า", nav_contact:"ติดต่อ", nav_about:"เกี่ยวกับเรา",
+    hero_title:"ฉันเป็นนักแคสเกม — มาดูคลิปและสะสม LINE Stickers ของฉัน!",
+    hero_sub:"ชมคลิปเกมล่าสุดและอุดหนุนสินค้าทางการ เริ่มจากชุดสติ๊กเกอร์ไลน์ได้เลย",
+    hero_cta_shop:"เข้าร้านค้า", hero_cta_stickers:"ซื้อ LINE Stickers",
+    latest_videos:"วิดีโอล่าสุด",
+    highlight_title:"แนะนำ: LINE Stickers ของฉัน",
+    highlight_body:"ชอบสตรีมของฉันไหม? ใช้สติ๊กเกอร์ลายทางการชุดนี้กับเพื่อนได้เลย",
+    browse_stickers:"ดูสติ๊กเกอร์", coming_apparel:"เสื้อผ้า (เร็ว ๆ นี้)",
+    shop_title:"ร้านค้า",
+    shop_sub_gamer:"ตอนนี้มีสติ๊กเกอร์ไลน์ให้ซื้อแล้ว อนาคตจะมีเสื้อผ้าและสินค้ากีฬาเกมเมอร์เพิ่ม",
+    tab_stickers:"สติ๊กเกอร์ LINE", tab_apparel:"เสื้อผ้า (เร็ว ๆ นี้)",
+    sticker_set1_title:"สติ๊กเกอร์ชุด 1",
+    sticker_set2_title:"สติ๊กเกอร์ชุด 2",
+    sticker_set_desc:"มีท่าทางซิกเนเจอร์จากสตรีมของฉัน!",
+    sticker_set_desc2:"อีโมตใหม่และมุกลับจากช่อง",
+    buy_on_line:"ซื้อที่ LINE Store", view_details:"ดูรายละเอียด",
+    coming_soon:"เร็ว ๆ นี้", apparel_tee:"เสื้อยืด Creator",
+    notify_when_drop:"สินค้าเมอร์ช์จะเปิดขายเร็ว ๆ นี้ ติดตามได้เลย!", notify_me:"แจ้งเตือนฉัน (เร็ว ๆ นี้)",
+    footer:"© 2025 ช่องของฉัน สงวนลิขสิทธิ์"
   },
   ja: {
-    nav_home: "ホーム",
-    nav_shop: "ショップ",
-    nav_contact: "お問い合わせ",
-    nav_about: "私たちについて",
-    hero_title: "YouTubeハブへようこそ",
-    hero_sub: "最新動画の視聴・公式グッズの購入・お問い合わせをこのサイトで。",
-    hero_cta: "ショップへ",
-    latest_videos: "最新の動画",
-    shop_title: "ショップ",
-    shop_sub: "商品をタップすると画像が切り替わります。画像や価格はHTMLで変更できます。",
-    contact_title: "お問い合わせ",
-    contact_sub: "ビジネスのご相談・コラボ依頼はこちら。",
-    contact_name: "お名前",
-    contact_email: "メール",
-    contact_msg: "メッセージ",
-    contact_send: "送信",
-    about_title: "私について",
-    about_body: "クリエイター、ゲーマー、コミュニティビルダー。このサイトでは私のコンテンツと商品を紹介しています。応援ありがとうございます！",
-    footer: "© 2025 My Channel. All rights reserved."
+    nav_home:"ホーム", nav_shop:"ショップ", nav_contact:"お問い合わせ", nav_about:"私たちについて",
+    hero_title:"ゲーム配信者です — 視聴＆応援＆LINEスタンプをゲット！",
+    hero_sub:"最新のゲーム動画をチェックして、公式グッズを手に入れよう。まずはLINEスタンプから。",
+    hero_cta_shop:"ショップへ", hero_cta_stickers:"LINEスタンプを見る",
+    latest_videos:"最新の動画",
+    highlight_title:"注目：公式LINEスタンプ",
+    highlight_body:"配信が好きなら、この公式スタンプを友だちと使ってね。",
+    browse_stickers:"スタンプ一覧", coming_apparel:"アパレル（近日公開）",
+    shop_title:"ショップ",
+    shop_sub_gamer:"現在はLINEスタンプを販売中。今後アパレルなども予定。",
+    tab_stickers:"LINEスタンプ", tab_apparel:"アパレル（近日）",
+    sticker_set1_title:"スタンプセット 1",
+    sticker_set2_title:"スタンプセット 2",
+    sticker_set_desc:"配信の決めポーズを収録！",
+    sticker_set_desc2:"新しいエモート＆内輪ネタも！",
+    buy_on_line:"LINEストアで購入", view_details:"詳細を見る",
+    coming_soon:"近日公開", apparel_tee:"クリエイターTシャツ",
+    notify_when_drop:"まもなくリリース！お楽しみに。", notify_me:"通知を受け取る（近日）",
+    footer:"© 2025 My Channel. All rights reserved."
   }
 };
 
@@ -87,7 +84,7 @@ function applyLang(lang){
       el.value = pack[key];
     } else if (el.placeholder) {
       el.placeholder = pack[key];
-    } else {
+    } else if (pack[key]) {
       el.textContent = pack[key];
     }
   });
@@ -95,13 +92,38 @@ function applyLang(lang){
   if (select) select.value = lang;
 }
 
-// Format prices as USD like US shops
-function formatPricesUSD(){
-  const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
-  document.querySelectorAll('.price[data-price], .compare[data-price]').forEach(el=>{
-    const raw = parseFloat(el.getAttribute('data-price'));
-    if (!isNaN(raw)) el.textContent = fmt.format(raw);
+// Flip images on product cards (ignore clicks on buttons/links)
+function initProductCards(){
+  document.querySelectorAll('.product').forEach(card=>{
+    card.addEventListener('click', e=>{
+      if (e.target.closest('.btn') || e.target.closest('.link')) return;
+      card.classList.toggle('active');
+    });
   });
+}
+
+// Simple tabs: show/hide categories
+function initTabs(){
+  const tabs = document.querySelectorAll('.tab');
+  const items = document.querySelectorAll('.product');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      const key = tab.dataset.tab;
+      items.forEach(it=>{
+        const match = it.getAttribute('data-category') === key;
+        it.classList.toggle('hidden', !match);
+      });
+      // scroll to first row after switching
+      const products = document.getElementById('products');
+      if (products) products.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+  // If URL hash matches tab id (e.g. #stickers)
+  const hash = location.hash.replace('#','');
+  const target = Array.from(tabs).find(t => t.id === hash);
+  if (target){ target.click(); }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -111,14 +133,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const select = document.getElementById('lang-select');
   if (select) select.addEventListener('change', e=> applyLang(e.target.value));
 
-  // Shop flip logic
-  document.querySelectorAll('.product').forEach(card=>{
-    card.addEventListener('click', e=>{
-      // Avoid toggling when clicking on buttons/links
-      if (e.target.closest('.btn') || e.target.closest('.link')) return;
-      card.classList.toggle('active');
-    });
-  });
-
-  formatPricesUSD();
+  initProductCards();
+  initTabs();
 });
