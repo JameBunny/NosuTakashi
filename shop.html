@@ -3,36 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Channel – Shop</title>
-  <meta name="description" content="Official LINE stickers and future merch.">
+  <title>NosuTakashi — Shop</title>
+  <meta name="description" content="Official LINE stickers by NosuTakashi and future merch.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.png">
   <script defer src="app.js"></script>
 </head>
 <body class="light">
   <div class="topbar">
-    <span>Free shipping $75+</span><span>30-day returns</span><span>Secure checkout</span>
+    <span data-i18n="promo_ship">Free shipping $75+</span>
+    <span data-i18n="promo_return">30-day returns</span>
+    <span data-i18n="promo_secure">Secure checkout</span>
   </div>
 
   <aside class="floating-bar" aria-label="Quick social links">
     <img src="assets/floating-bar.png" alt="Social bar">
     <div class="floating-links">
-      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">⌂</a>
-      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">f</a>
       <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">▶</a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">◎</a>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">f</a>
       <a href="contact.html" aria-label="Contact">✉</a>
     </div>
   </aside>
 
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html"><div class="logo"></div><span>My Channel</span></a>
+      <a class="brand" href="index.html"><div class="logo">NT</div><span>NosuTakashi</span></a>
       <nav class="menu">
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="shop.html" class="active" data-i18n="nav_shop">Shop</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="about.html" data-i18n="nav_about">About Us</a>
-        <select id="lang-select" class="lang-select">
+        <select id="lang-select" class="lang-select" aria-label="Language">
           <option value="en">English</option>
           <option value="th">ไทย</option>
           <option value="ja">日本語</option>
@@ -46,7 +48,7 @@
     <section class="section intro soft-card reveal">
       <h1 data-i18n="shop_title">Shop</h1>
       <p class="muted" data-i18n="shop_sub_gamer">
-        Official LINE sticker sets are available now. Apparel and more gamer merch coming soon.
+        Official LINE sticker sets available now. Apparel and more gamer merch coming soon.
       </p>
 
       <div class="tabs" role="tablist">
@@ -56,20 +58,22 @@
     </section>
 
     <section class="products" id="products">
-      <!-- LINE Stickers -->
+      <!-- LINE Stickers: Set 1 -->
       <article class="product soft-card reveal" data-category="stickers">
         <span class="badge line">LINE</span>
         <div class="thumb" title="Click to flip image">
-          <!-- ใส่รูปพรีวิวของแพ็กสติ๊กเกอร์ของคุณเองภายหลัง -->
+          <!-- ใส่ภาพสติ๊กเกอร์จริงภายหลัง -->
           <img class="img1" src="https://picsum.photos/seed/line1/900/900" alt="LINE Stickers Set 1" loading="lazy">
           <img class="img2" src="https://picsum.photos/seed/line1b/900/900" alt="LINE Stickers Set 1 alt" loading="lazy">
         </div>
         <div class="info">
           <div class="row">
-            <h3 class="title" data-i18n="sticker_set1_title">Sticker Set 1</h3>
-            <div class="rating" aria-label="5 out of 5">★★★★★<span class="rating-fill" style="width:100%"></span></div>
+            <h3 class="title" data-i18n="sticker_set1_title">NosuTakashi Stickers — Set 1</h3>
+            <div class="rating" aria-label="5 out of 5">
+              <span class="rating-fill" style="width:100%"></span>
+            </div>
           </div>
-          <p class="meta" data-i18n="sticker_set_desc">Use my signature reactions from the stream!</p>
+          <p class="meta" data-i18n="sticker_set_desc">Stream reactions & inside jokes for your chats.</p>
           <div class="cta-row">
             <a class="btn" href="https://store.line.me/stickershop/product/30372109/en" target="_blank" rel="noopener" data-i18n="buy_on_line">Buy on LINE Store</a>
             <a class="link" href="https://store.line.me/stickershop/product/30372109/en" target="_blank" rel="noopener" data-i18n="view_details">View details</a>
@@ -77,6 +81,7 @@
         </div>
       </article>
 
+      <!-- LINE Stickers: Set 2 -->
       <article class="product soft-card reveal" data-category="stickers">
         <span class="badge line">LINE</span>
         <div class="thumb" title="Click to flip image">
@@ -85,10 +90,12 @@
         </div>
         <div class="info">
           <div class="row">
-            <h3 class="title" data-i18n="sticker_set2_title">Sticker Set 2</h3>
-            <div class="rating" aria-label="4.8 out of 5">★★★★★<span class="rating-fill" style="width:96%"></span></div>
+            <h3 class="title" data-i18n="sticker_set2_title">NosuTakashi Stickers — Set 2</h3>
+            <div class="rating" aria-label="4.8 out of 5">
+              <span class="rating-fill" style="width:96%"></span>
+            </div>
           </div>
-          <p class="meta" data-i18n="sticker_set_desc2">Fresh emotes and inside jokes from my channel.</p>
+          <p class="meta" data-i18n="sticker_set_desc2">New emotes & memes from the channel.</p>
           <div class="cta-row">
             <a class="btn" href="https://store.line.me/stickershop/product/31896752/en" target="_blank" rel="noopener" data-i18n="buy_on_line">Buy on LINE Store</a>
             <a class="link" href="https://store.line.me/stickershop/product/31896752/en" target="_blank" rel="noopener" data-i18n="view_details">View details</a>
@@ -99,14 +106,16 @@
       <!-- Apparel placeholder -->
       <article class="product soft-card reveal hidden" data-category="apparel">
         <span class="badge soon" data-i18n="coming_soon">Coming Soon</span>
-        <div class="thumb">
-          <img class="img1" src="https://picsum.photos/seed/tee/900/900" alt="Creator Tee preview" loading="lazy">
+        <div class="thumb" title="Preview">
+          <img class="img1" src="https://picsum.photos/seed/tee/900/900" alt="Creator Tee" loading="lazy">
           <img class="img2" src="https://picsum.photos/seed/tee2/900/900" alt="Creator Tee alt" loading="lazy">
         </div>
         <div class="info">
           <div class="row">
             <h3 class="title" data-i18n="apparel_tee">Creator Tee</h3>
-            <div class="rating" aria-label="5 out of 5">★★★★★<span class="rating-fill" style="width:100%"></span></div>
+            <div class="rating" aria-label="5 out of 5">
+              <span class="rating-fill" style="width:100%"></span>
+            </div>
           </div>
           <p class="meta" data-i18n="notify_when_drop">Merch drops soon — stay tuned!</p>
           <div class="cta-row">
@@ -119,7 +128,7 @@
 
   <footer class="footer">
     <div class="container foot-note">
-      <small data-i18n="footer">© 2025 My Channel. All rights reserved.</small>
+      <small data-i18n="footer">© 2025 NosuTakashi. All rights reserved.</small>
     </div>
   </footer>
 </body>
