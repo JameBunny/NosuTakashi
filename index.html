@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NosuTakashi — Home</title>
   <meta name="description" content="NosuTakashi: gamer caster hub — watch, support, and shop LINE stickers & future merch.">
-  <!-- แก้ cache-bust ด้วย v=... ทุกครั้งที่อัปเดต -->
-  <link rel="stylesheet" href="styles.css?v=20251025-4">
+  <link rel="stylesheet" href="styles.css?v=20251025-join">
   <link rel="icon" href="assets/favicon.png">
-  <script defer src="app.js?v=20251025-4"></script>
+  <script defer src="app.js?v=20251025-join"></script>
 </head>
 <body class="light">
+  <!-- Promo -->
   <div class="topbar">
     <span data-i18n="promo_ship">Free shipping $75+</span>
     <span data-i18n="promo_return">30-day returns</span>
     <span data-i18n="promo_secure">Secure checkout</span>
   </div>
 
+  <!-- Floating social bar -->
   <aside class="floating-bar" aria-label="Quick social links">
     <img src="assets/floating-bar.png" alt="Social bar">
     <div class="floating-links">
@@ -37,6 +38,12 @@
         <a href="shop.html" data-i18n="nav_shop">Shop</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="about.html" data-i18n="nav_about">About Us</a>
+
+        <!-- JOIN button -->
+        <a class="btn btn-join" target="_blank" rel="noopener"
+           href="https://www.youtube.com/channel/UC8uTtKqV_0c0ahGMGUvbMLg/join"
+           data-i18n="nav_join">Join</a>
+
         <select id="lang-select" class="lang-select" aria-label="Language">
           <option value="en">English</option>
           <option value="th">ไทย</option>
@@ -58,6 +65,9 @@
         <div class="cta-pair">
           <a class="btn" href="shop.html" data-i18n="hero_cta_shop">Visit the Shop</a>
           <a class="btn btn-outline" href="shop.html#stickers" data-i18n="hero_cta_stickers">Get LINE Stickers</a>
+          <a class="btn btn-ghost" target="_blank" rel="noopener"
+             href="https://www.youtube.com/channel/UC8uTtKqV_0c0ahGMGUvbMLg/join"
+             data-i18n="hero_cta_join">Join the Channel</a>
         </div>
         <ul class="trust">
           <li data-i18n="promo_ship">Free shipping $75+</li>
@@ -74,7 +84,7 @@
       </div>
     </section>
 
-    <!-- FEATURE: LINE STICKERS -->
+    <!-- Highlight: Stickers -->
     <section class="section soft-card highlight-stickers reveal">
       <div class="highlight-copy">
         <h3 data-i18n="highlight_title">Featured: LINE Stickers</h3>
@@ -88,7 +98,7 @@
       </div>
     </section>
 
-    <!-- 🔥 NEW: HOME PRODUCT SHOWCASE -->
+    <!-- Home product showcase -->
     <section class="section home-products">
       <div class="home-head">
         <h2 class="section-title" data-i18n="home_products">Latest from the Shop</h2>
