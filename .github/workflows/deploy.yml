@@ -18,15 +18,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: 'npm'
+
+      # ถ้าไม่มี package-lock.json คำสั่งแรกจะล้ม แต่เราสำรองด้วย npm i ไว้แล้ว
       - run: npm ci || npm i
-      - run: npm run build
+
+      # สร้างไฟล์ 404.html สำหรับ SPA (กัน 404 เวลา refresh บน sub-route)
+      - run: |
+          npm run build
+          cp dist/index.html dist/404.html || copy dist\\index.html dist\\404.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
