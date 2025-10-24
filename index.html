@@ -12,7 +12,12 @@
   <script defer src="app.js"></script>
 </head>
 <body>
-  <!-- Floating social bar with the provided image and quick links -->
+  <!-- US-style promo topbar -->
+  <div class="topbar">
+    🇺🇸 <span>Free shipping over $75</span> · <span>30-day free returns</span> · <span>Secure checkout</span>
+  </div>
+
+  <!-- Floating social bar -->
   <aside class="floating-bar" aria-label="Quick social links">
     <img src="assets/floating-bar.png" alt="Social bar">
     <div class="floating-links">
@@ -50,10 +55,15 @@
         <h1 data-i18n="hero_title">Welcome to my YouTube hub</h1>
         <p data-i18n="hero_sub">Watch my latest videos, shop official merch, and get in touch — all in one place.</p>
         <a class="btn" href="shop.html" data-i18n="hero_cta">Visit the Shop</a>
+        <!-- Trust row like US stores -->
+        <div class="trust-row">
+          <div>✓ Free Shipping $75+</div>
+          <div>✓ 30-Day Returns</div>
+          <div>✓ Secure Checkout</div>
+        </div>
       </div>
       <div class="reveal">
         <div class="video-wrap">
-          <!-- Replace the src below with your channel uploads/playlist embed -->
           <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=GoogleDevelopers"
                   title="YouTube video player" frameborder="0" allowfullscreen loading="lazy"></iframe>
         </div>
@@ -69,7 +79,35 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="shop.html">All Products</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Best Sellers</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter" onsubmit="event.preventDefault(); alert('Subscribed!');">
+          <input class="input" type="email" placeholder="Email address">
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <div class="pay-logos">VISA · MasterCard · AmEx · PayPal</div>
+      </div>
+    </div>
+    <div class="container foot-note">
       <small data-i18n="footer">© 2025 My Channel. All rights reserved.</small>
     </div>
   </footer>
