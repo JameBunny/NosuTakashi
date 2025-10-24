@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="th" data-lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NosuTakashi — Home</title>
-  <meta name="description" content="NosuTakashi: gamer caster hub — watch, support, and shop LINE stickers & future merch.">
-  <link rel="stylesheet" href="styles.css?v=20251025-movejoin">
-  <link rel="icon" href="assets/favicon.png">
-  <script defer src="app.js?v=20251025-movejoin"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NosuTakashi — หน้าแรก</title>
+  <meta name="description" content="NosuTakashi: นักแคสเกม + ร้านขาย LINE Stickers และเมอร์ช์ในอนาคต" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css?v=20251025-fix1" />
+  <script defer src="app.js?v=20251025-fix1"></script>
 </head>
 <body class="light">
-  <!-- Floating social bar -->
+  <!-- Social floating bar -->
   <aside class="floating-bar" aria-label="Quick social links">
-    <img src="assets/floating-bar.png" alt="Social bar">
+    <img src="assets/floating-bar.png" alt="" />
     <div class="floating-links">
       <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">▶</a>
       <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">◎</a>
@@ -23,9 +23,7 @@
 
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="NosuTakashi">
-        <div class="logo">NT</div><span>NosuTakashi</span>
-      </a>
+      <a class="brand" href="index.html"><div class="logo">NT</div><span>NosuTakashi</span></a>
       <nav class="menu">
         <a href="index.html" class="active" data-i18n="nav_home">Home</a>
         <a href="shop.html" data-i18n="nav_shop">Shop</a>
@@ -33,7 +31,7 @@
         <a href="about.html" data-i18n="nav_about">About Us</a>
         <select id="lang-select" class="lang-select" aria-label="Language">
           <option value="en">English</option>
-          <option value="th">ไทย</option>
+          <option value="th" selected>ไทย</option>
           <option value="ja">日本語</option>
         </select>
       </nav>
@@ -45,114 +43,103 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-copy reveal">
-        <h1 data-i18n="hero_title">I’m NosuTakashi — gamer caster</h1>
+        <h1 data-i18n="hero_title">ฉันคือ NosuTakashi — นักแคสเกม</h1>
         <p class="muted" data-i18n="hero_sub">
-          Watch my latest gameplay and support me with official goods. Start with my LINE stickers below.
+          ชมเกมเพลย์ล่าสุดและสนับสนุนฉันด้วยสินค้าทางการ เริ่มจาก LINE Stickers ได้เลย
         </p>
         <div class="cta-pair">
-          <a class="btn" href="shop.html" data-i18n="hero_cta_shop">Visit the Shop</a>
-          <a class="btn btn-outline" href="shop.html#stickers" data-i18n="hero_cta_stickers">Get LINE Stickers</a>
-          <!-- สมัครสมาชิก: แสดงเฉพาะหน้าแรก -->
+          <a class="btn" href="shop.html" data-i18n="hero_cta_shop">เข้าร้านค้า</a>
+          <a class="btn btn-outline" href="shop.html#stickers" data-i18n="hero_cta_stickers">ซื้อ LINE Stickers</a>
+          <!-- สมัครสมาชิก: เฉพาะหน้าแรก -->
           <a class="btn btn-ghost" target="_blank" rel="noopener"
              href="https://www.youtube.com/channel/UC8uTtKqV_0c0ahGMGUvbMLg/join"
-             data-i18n="hero_cta_join">Join the Channel</a>
+             data-i18n="hero_cta_join">สมัครสมาชิก</a>
         </div>
       </div>
       <div class="hero-media reveal">
         <div class="video-wrap soft-card">
-          <iframe
-            src="https://www.youtube.com/embed?listType=user_uploads&list=GoogleDevelopers"
-            title="YouTube video player" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+                  title="Channel intro" loading="lazy" allowfullscreen></iframe>
         </div>
       </div>
     </section>
 
-    <!-- Highlight: Stickers -->
-    <section class="section soft-card highlight-stickers reveal">
-      <div class="highlight-copy">
-        <h3 data-i18n="highlight_title">Featured: LINE Stickers</h3>
-        <p class="muted" data-i18n="highlight_body">
-          Bring my stream energy to your chats. Two sticker sets available now on LINE Store.
-        </p>
-        <div class="highlight-actions">
-          <a class="btn" href="shop.html#stickers" data-i18n="browse_stickers">Browse Stickers</a>
-          <a class="btn btn-outline" href="shop.html#apparel" data-i18n="coming_apparel">Apparel (Coming Soon)</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Home product showcase -->
+    <!-- แนะนำสินค้าหน้าแรก -->
     <section class="section home-products">
       <div class="home-head">
-        <h2 class="section-title" data-i18n="home_products">Latest from the Shop</h2>
-        <a class="link" href="shop.html" data-i18n="see_all">See all</a>
+        <h2 class="section-title" data-i18n="home_products">สินค้าใหม่จากร้าน</h2>
+        <a class="link" href="shop.html" data-i18n="see_all">ดูทั้งหมด</a>
       </div>
 
       <div class="products">
-        <!-- Sticker 1 -->
+        <!-- LINE Stickers 1 -->
         <article class="product soft-card reveal">
           <span class="badge line">LINE</span>
-          <div class="thumb" title="Click to flip image">
+          <div class="thumb" title="คลิกเพื่อสลับภาพ">
             <img class="img1" src="https://picsum.photos/seed/line1/900/900" alt="LINE Stickers Set 1" loading="lazy">
             <img class="img2" src="https://picsum.photos/seed/line1b/900/900" alt="LINE Stickers Set 1 alt" loading="lazy">
           </div>
           <div class="info">
             <div class="row">
-              <h3 class="title" data-i18n="sticker_set1_title">NosuTakashi Stickers — Set 1</h3>
-              <div class="rating" aria-label="5 out of 5"><span class="rating-fill" style="width:100%"></span></div>
+              <h3 class="title" data-i18n="sticker_set1_title">NosuTakashi Stickers — ชุด 1</h3>
+              <div class="rating" aria-label="5/5"><span class="rating-fill" style="width:100%"></span></div>
             </div>
-            <p class="meta" data-i18n="sticker_set_desc">Stream reactions & inside jokes for your chats.</p>
+            <p class="meta" data-i18n="sticker_set_desc">ท่าทางและมุกจากสตรีม ใส่ในแชตได้เลย</p>
             <div class="cta-row">
-              <a class="btn" href="https://store.line.me/stickershop/product/30372109/en" target="_blank" rel="noopener" data-i18n="buy_on_line">Buy on LINE Store</a>
-              <a class="link" href="shop.html#stickers" data-i18n="view_details">View details</a>
+              <a class="btn" target="_blank" rel="noopener"
+                 href="https://store.line.me/stickershop/product/30372109/en"
+                 data-i18n="buy_on_line">ซื้อที่ LINE Store</a>
+              <a class="link" href="shop.html#stickers" data-i18n="view_details">ดูรายละเอียด</a>
             </div>
           </div>
         </article>
 
-        <!-- Sticker 2 -->
+        <!-- LINE Stickers 2 -->
         <article class="product soft-card reveal">
           <span class="badge line">LINE</span>
-          <div class="thumb" title="Click to flip image">
+          <div class="thumb" title="คลิกเพื่อสลับภาพ">
             <img class="img1" src="https://picsum.photos/seed/line2/900/900" alt="LINE Stickers Set 2" loading="lazy">
             <img class="img2" src="https://picsum.photos/seed/line2b/900/900" alt="LINE Stickers Set 2 alt" loading="lazy">
           </div>
           <div class="info">
             <div class="row">
-              <h3 class="title" data-i18n="sticker_set2_title">NosuTakashi Stickers — Set 2</h3>
-              <div class="rating" aria-label="4.8 out of 5"><span class="rating-fill" style="width:96%"></span></div>
+              <h3 class="title" data-i18n="sticker_set2_title">NosuTakashi Stickers — ชุด 2</h3>
+              <div class="rating" aria-label="4.8/5"><span class="rating-fill" style="width:96%"></span></div>
             </div>
-            <p class="meta" data-i18n="sticker_set_desc2">New emotes & memes from the channel.</p>
+            <p class="meta" data-i18n="sticker_set_desc2">อีโมตใหม่และมีมจากช่อง</p>
             <div class="cta-row">
-              <a class="btn" href="https://store.line.me/stickershop/product/31896752/en" target="_blank" rel="noopener" data-i18n="buy_on_line">Buy on LINE Store</a>
-              <a class="link" href="shop.html#stickers" data-i18n="view_details">View details</a>
+              <a class="btn" target="_blank" rel="noopener"
+                 href="https://store.line.me/stickershop/product/31896752/en"
+                 data-i18n="buy_on_line">ซื้อที่ LINE Store</a>
+              <a class="link" href="shop.html#stickers" data-i18n="view_details">ดูรายละเอียด</a>
             </div>
           </div>
         </article>
 
-        <!-- Apparel teaser -->
+        <!-- เสื้อผ้า (ทีเซอร์) -->
         <article class="product soft-card reveal">
-          <span class="badge soon" data-i18n="coming_soon">Coming Soon</span>
+          <span class="badge soon" data-i18n="coming_soon">เร็ว ๆ นี้</span>
           <div class="thumb">
             <img class="img1" src="https://picsum.photos/seed/tee/900/900" alt="Creator Tee" loading="lazy">
             <img class="img2" src="https://picsum.photos/seed/tee2/900/900" alt="Creator Tee alt" loading="lazy">
           </div>
           <div class="info">
             <div class="row">
-              <h3 class="title" data-i18n="apparel_tee">Creator Tee</h3>
-              <div class="rating" aria-label="5 out of 5"><span class="rating-fill" style="width:100%"></span></div>
+              <h3 class="title" data-i18n="apparel_tee">เสื้อยืด Creator</h3>
+              <div class="rating" aria-label="5/5"><span class="rating-fill" style="width:100%"></span></div>
             </div>
-            <p class="meta" data-i18n="notify_when_drop">Merch drops soon — stay tuned!</p>
+            <p class="meta" data-i18n="notify_when_drop">เมอร์ช์จะเปิดขายเร็ว ๆ นี้ ติดตามได้เลย!</p>
             <div class="cta-row">
-              <a class="btn btn-outline" href="shop.html#apparel" data-i18n="notify_me">Notify me (soon)</a>
+              <a class="btn btn-outline" href="shop.html#apparel" data-i18n="notify_me">แจ้งเตือนฉัน (เร็ว ๆ นี้)</a>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- Latest videos -->
+    <!-- วิดีโอล่าสุด -->
     <section class="section">
-      <h2 class="section-title reveal" data-i18n="latest_videos">Latest videos</h2>
+      <h2 class="section-title reveal" data-i18n="latest_videos">วิดีโอล่าสุด</h2>
       <div class="grid videos">
         <div class="soft-card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1"></iframe></div></div>
         <div class="soft-card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video 2"></iframe></div></div>
@@ -163,7 +150,7 @@
 
   <footer class="footer">
     <div class="container foot-note">
-      <small data-i18n="footer">© 2025 NosuTakashi. All rights reserved.</small>
+      <small data-i18n="footer">© 2025 NosuTakashi สงวนลิขสิทธิ์</small>
     </div>
   </footer>
 </body>
