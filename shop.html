@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NosuTakashi — Shop</title>
   <meta name="description" content="Official LINE stickers by NosuTakashi and future merch.">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20251025-join">
   <link rel="icon" href="assets/favicon.png">
-  <script defer src="app.js"></script>
+  <script defer src="app.js?v=20251025-join"></script>
 </head>
 <body class="light">
   <div class="topbar">
@@ -34,6 +34,11 @@
         <a href="shop.html" class="active" data-i18n="nav_shop">Shop</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="about.html" data-i18n="nav_about">About Us</a>
+
+        <a class="btn btn-join" target="_blank" rel="noopener"
+           href="https://www.youtube.com/channel/UC8uTtKqV_0c0ahGMGUvbMLg/join"
+           data-i18n="nav_join">Join</a>
+
         <select id="lang-select" class="lang-select" aria-label="Language">
           <option value="en">English</option>
           <option value="th">ไทย</option>
@@ -62,16 +67,13 @@
       <article class="product soft-card reveal" data-category="stickers">
         <span class="badge line">LINE</span>
         <div class="thumb" title="Click to flip image">
-          <!-- ใส่ภาพสติ๊กเกอร์จริงภายหลัง -->
           <img class="img1" src="https://picsum.photos/seed/line1/900/900" alt="LINE Stickers Set 1" loading="lazy">
           <img class="img2" src="https://picsum.photos/seed/line1b/900/900" alt="LINE Stickers Set 1 alt" loading="lazy">
         </div>
         <div class="info">
           <div class="row">
             <h3 class="title" data-i18n="sticker_set1_title">NosuTakashi Stickers — Set 1</h3>
-            <div class="rating" aria-label="5 out of 5">
-              <span class="rating-fill" style="width:100%"></span>
-            </div>
+            <div class="rating" aria-label="5 out of 5"><span class="rating-fill" style="width:100%"></span></div>
           </div>
           <p class="meta" data-i18n="sticker_set_desc">Stream reactions & inside jokes for your chats.</p>
           <div class="cta-row">
@@ -91,9 +93,7 @@
         <div class="info">
           <div class="row">
             <h3 class="title" data-i18n="sticker_set2_title">NosuTakashi Stickers — Set 2</h3>
-            <div class="rating" aria-label="4.8 out of 5">
-              <span class="rating-fill" style="width:96%"></span>
-            </div>
+            <div class="rating" aria-label="4.8 out of 5"><span class="rating-fill" style="width:96%"></span></div>
           </div>
           <p class="meta" data-i18n="sticker_set_desc2">New emotes & memes from the channel.</p>
           <div class="cta-row">
@@ -113,9 +113,7 @@
         <div class="info">
           <div class="row">
             <h3 class="title" data-i18n="apparel_tee">Creator Tee</h3>
-            <div class="rating" aria-label="5 out of 5">
-              <span class="rating-fill" style="width:100%"></span>
-            </div>
+            <div class="rating" aria-label="5 out of 5"><span class="rating-fill" style="width:100%"></span></div>
           </div>
           <p class="meta" data-i18n="notify_when_drop">Merch drops soon — stay tuned!</p>
           <div class="cta-row">
