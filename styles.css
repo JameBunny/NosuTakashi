@@ -1,0 +1,171 @@
+/* ============ Global styles ============ */
+:root{
+  --bg: #0f1115;
+  --card: #161a22;
+  --muted: #8a90a2;
+  --primary: #6aa6ff;
+  --primary-2: #8bd7ff;
+  --text: #ecf0ff;
+  --accent: #22d3ee;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background: linear-gradient(180deg, #0b0e13 0%, #101826 100%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "TH Sarabun New", "Noto Sans JP", "Noto Sans Thai", Arial, sans-serif;
+  line-height:1.6;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+a{color:var(--primary); text-decoration:none}
+a:hover{color:var(--primary-2)}
+
+button, .btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:.5rem;
+  border:1px solid transparent;
+  padding:.75rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color:#001018;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, opacity .2s ease;
+}
+button:hover, .btn:hover{transform: translateY(-1px); opacity:.95}
+
+/* ============ Header / Nav ============ */
+.header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(8px);
+  background: rgba(15,17,21,.6);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{display:flex; align-items:center; gap:.75rem; font-weight:800}
+.brand .logo{
+  width:40px; height:40px; border-radius:12px;
+  background: radial-gradient(60% 60% at 30% 30%, var(--primary) 0%, #243b55 100%);
+  box-shadow: var(--shadow);
+}
+.menu{display:flex; gap:1rem; align-items:center}
+.menu a{padding:.5rem 1rem; border-radius:999px}
+.menu a.active, .menu a:hover{
+  background: rgba(255,255,255,.08);
+}
+
+.lang-select{
+  appearance:none; padding:.5rem .75rem; border-radius:12px; background:#1a2130; color:var(--text);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+/* Mobile nav */
+.burger{display:none; flex-direction:column; gap:4px; cursor:pointer}
+.burger span{width:24px; height:2px; background:var(--text); display:block;}
+
+@media (max-width: 880px){
+  .menu{display:none; position:absolute; right:20px; top:60px; background:#131925; flex-direction:column; padding:12px; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
+  .menu.open{display:flex}
+  .burger{display:flex}
+}
+
+/* ============ Hero / Cards ============ */
+.hero{
+  padding: 60px 0;
+  display:grid; grid-template-columns: 1.2fr 1fr; gap:32px; align-items:center;
+}
+.hero .card{
+  background: linear-gradient(180deg, #151b28 0%, #0e1320 100%);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:28px;
+  box-shadow: var(--shadow);
+}
+.hero h1{font-size: clamp(28px, 3.2vw, 48px); line-height:1.15; margin:0 0 10px}
+.hero p{color:var(--muted); margin:0 0 16px}
+
+.video-wrap{
+  position:relative; padding-top:56.25%;
+  border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.08);
+  box-shadow: var(--shadow);
+}
+.video-wrap iframe{position:absolute; inset:0; width:100%; height:100%}
+
+.grid{display:grid; grid-template-columns: repeat(3,1fr); gap:20px}
+@media (max-width: 992px){ .hero{grid-template-columns: 1fr} .grid{grid-template-columns: repeat(2,1fr)} }
+@media (max-width: 640px){ .grid{grid-template-columns: 1fr} }
+
+.card{
+  background: #121624;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:20px;
+}
+
+/* ============ Shop ============ */
+.products{display:grid; grid-template-columns: repeat(4, 1fr); gap:18px}
+@media (max-width: 1024px){ .products{grid-template-columns: repeat(3,1fr)} }
+@media (max-width: 780px){ .products{grid-template-columns: repeat(2,1fr)} }
+@media (max-width: 520px){ .products{grid-template-columns: 1fr} }
+
+.product{
+  background:#121826;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  overflow:hidden;
+  transition: transform .2s ease;
+}
+.product:hover{transform: translateY(-3px)}
+.product .thumb{position:relative; padding-top:100%; overflow:hidden}
+.product img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:opacity .25s ease}
+.product .img2{opacity:0}
+.product.active .img1{opacity:0}
+.product.active .img2{opacity:1}
+.product .info{padding:14px 16px}
+.product .title{font-weight:700}
+.product .price{color:var(--primary-2)}
+
+/* ============ Contact ============ */
+.form{
+  display:grid; gap:12px;
+}
+.input, textarea{
+  width:100%; padding:12px 14px; border-radius:12px;
+  background:#111827; color:var(--text);
+  border:1px solid rgba(255,255,255,.12);
+}
+textarea{min-height:140px; resize:vertical}
+
+/* ============ Footer ============ */
+.footer{
+  margin-top:40px; padding:24px 0; color:#9aa3b2; border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ============ Floating Social Bar (from provided image) ============ */
+.floating-bar{
+  position:fixed; left:10px; top:50%; transform: translateY(-50%);
+  width:54px; background:#2a2d33; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,.1);
+  z-index:60;
+}
+.floating-bar img{width:100%; display:block}
+.floating-links{display:flex; flex-direction:column; align-items:center; gap:12px; padding:12px}
+.floating-links a{width:28px; height:28px; display:grid; place-items:center; background:#141821; border-radius:8px; border:1px solid rgba(255,255,255,.1)}
+.floating-links a:hover{transform: translateY(-2px)}
+@media (max-width: 860px){ .floating-bar{display:none} }
+
+/* Reveal animations */
+.reveal{opacity:0; transform: translateY(12px); transition: .6s ease}
+.reveal.in{opacity:1; transform: none}
