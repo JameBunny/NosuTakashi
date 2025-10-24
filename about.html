@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Channel – About</title>
+  <meta name="description" content="About the creator">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.png">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <aside class="floating-bar" aria-label="Quick social links">
+    <img src="assets/floating-bar.png" alt="Social bar">
+    <div class="floating-links">
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">⌂</a>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">f</a>
+      <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">▶</a>
+      <a href="contact.html" aria-label="Contact">✉</a>
+    </div>
+  </aside>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>My Channel</span>
+      </div>
+      <nav class="menu">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="shop.html" data-i18n="nav_shop">Shop</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="about.html" class="active" data-i18n="nav_about">About Us</a>
+        <select id="lang-select" class="lang-select">
+          <option value="en">English</option>
+          <option value="th">ไทย</option>
+          <option value="ja">日本語</option>
+        </select>
+      </nav>
+      <div class="burger" aria-label="Menu"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card reveal">
+        <h1 data-i18n="about_title">About Me</h1>
+        <p data-i18n="about_body">Creator, gamer, and community builder. This site showcases my content and products. Thank you for your support!</p>
+      </div>
+      <div class="reveal">
+        <div class="video-wrap">
+          <!-- Replace with your channel trailer or intro -->
+          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Channel Trailer" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small data-i18n="footer">© 2025 My Channel. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
