@@ -3,38 +3,42 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Channel – Home</title>
-  <meta name="description" content="Gamer caster hub: YouTube, LINE stickers, merch, contact.">
+  <title>NosuTakashi — Home</title>
+  <meta name="description" content="NosuTakashi: gamer caster hub — watch, support, and shop LINE stickers & future merch.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.png">
   <script defer src="app.js"></script>
 </head>
 <body class="light">
+  <!-- Subtle US-style promo bar -->
   <div class="topbar">
-    <span>Free shipping $75+</span><span>30-day returns</span><span>Secure checkout</span>
+    <span data-i18n="promo_ship">Free shipping $75+</span>
+    <span data-i18n="promo_return">30-day returns</span>
+    <span data-i18n="promo_secure">Secure checkout</span>
   </div>
 
+  <!-- Floating social bar -->
   <aside class="floating-bar" aria-label="Quick social links">
     <img src="assets/floating-bar.png" alt="Social bar">
     <div class="floating-links">
-      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">⌂</a>
-      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">f</a>
       <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">▶</a>
+      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">◎</a>
+      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">f</a>
       <a href="contact.html" aria-label="Contact">✉</a>
     </div>
   </aside>
 
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="logo"></div><span>My Channel</span>
+      <a class="brand" href="index.html" aria-label="NosuTakashi">
+        <div class="logo">NT</div><span>NosuTakashi</span>
       </a>
       <nav class="menu">
         <a href="index.html" class="active" data-i18n="nav_home">Home</a>
         <a href="shop.html" data-i18n="nav_shop">Shop</a>
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
         <a href="about.html" data-i18n="nav_about">About Us</a>
-        <select id="lang-select" class="lang-select">
+        <select id="lang-select" class="lang-select" aria-label="Language">
           <option value="en">English</option>
           <option value="th">ไทย</option>
           <option value="ja">日本語</option>
@@ -47,25 +51,40 @@
   <main class="container">
     <section class="hero">
       <div class="hero-copy reveal">
-        <h1 data-i18n="hero_title">I’m a gamer caster — watch, support, and collect my LINE stickers!</h1>
+        <h1 data-i18n="hero_title">I’m NosuTakashi — gamer caster</h1>
         <p class="muted" data-i18n="hero_sub">
-          Catch my latest gaming videos and grab official goodies. Start with my LINE sticker sets below.
+          Watch my latest gameplay and support me with official goods. Start with my LINE stickers below.
         </p>
         <div class="cta-pair">
           <a class="btn" href="shop.html" data-i18n="hero_cta_shop">Visit the Shop</a>
           <a class="btn btn-outline" href="shop.html#stickers" data-i18n="hero_cta_stickers">Get LINE Stickers</a>
         </div>
         <ul class="trust">
-          <li>Free Shipping $75+</li>
-          <li>30-Day Returns</li>
-          <li>Secure Checkout</li>
+          <li data-i18n="promo_ship">Free shipping $75+</li>
+          <li data-i18n="promo_return">30-day returns</li>
+          <li data-i18n="promo_secure">Secure checkout</li>
         </ul>
       </div>
       <div class="hero-media reveal">
         <div class="video-wrap soft-card">
+          <!-- Replace with your channel uploads / trailer -->
           <iframe
             src="https://www.youtube.com/embed?listType=user_uploads&list=GoogleDevelopers"
-            title="YouTube video player" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            title="YouTube video player"
+            frameborder="0" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-card highlight-stickers reveal">
+      <div class="highlight-copy">
+        <h3 data-i18n="highlight_title">Featured: LINE Stickers</h3>
+        <p class="muted" data-i18n="highlight_body">
+          Bring my stream energy to your chats. Two sticker sets available now on LINE Store.
+        </p>
+        <div class="highlight-actions">
+          <a class="btn" href="shop.html#stickers" data-i18n="browse_stickers">Browse Stickers</a>
+          <a class="btn btn-outline" href="shop.html#apparel" data-i18n="coming_apparel">Apparel (Coming Soon)</a>
         </div>
       </div>
     </section>
@@ -78,24 +97,11 @@
         <div class="soft-card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Video 3"></iframe></div></div>
       </div>
     </section>
-
-    <section class="section soft-card highlight-stickers reveal">
-      <div class="highlight-copy">
-        <h3 data-i18n="highlight_title">Featured: My LINE Stickers</h3>
-        <p class="muted" data-i18n="highlight_body">
-          Love my streams? Grab these official LINE sticker sets to use with your friends.
-        </p>
-        <div class="highlight-actions">
-          <a class="btn" href="shop.html#stickers" data-i18n="browse_stickers">Browse Stickers</a>
-          <a class="btn btn-outline" href="shop.html#apparel" data-i18n="coming_apparel">Apparel (Coming Soon)</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
     <div class="container foot-note">
-      <small data-i18n="footer">© 2025 My Channel. All rights reserved.</small>
+      <small data-i18n="footer">© 2025 NosuTakashi. All rights reserved.</small>
     </div>
   </footer>
 </body>
