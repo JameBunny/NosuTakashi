@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Channel – Shop</title>
-  <meta name="description" content="Shop merch and goodies.">
+  <meta name="description" content="Official LINE stickers and future merch.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.png">
   <script defer src="app.js"></script>
 </head>
-<body>
+<body class="light">
   <div class="topbar">
-    🇺🇸 <span>Free shipping over $75</span> · <span>30-day free returns</span> · <span>Secure checkout</span>
+    <span>Free shipping $75+</span><span>30-day returns</span><span>Secure checkout</span>
   </div>
 
   <aside class="floating-bar" aria-label="Quick social links">
@@ -26,10 +26,7 @@
 
   <header class="header">
     <div class="container nav">
-      <div class="brand">
-        <div class="logo"></div>
-        <span>My Channel</span>
-      </div>
+      <a class="brand" href="index.html"><div class="logo"></div><span>My Channel</span></a>
       <nav class="menu">
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="shop.html" class="active" data-i18n="nav_shop">Shop</a>
@@ -41,129 +38,79 @@
           <option value="ja">日本語</option>
         </select>
       </nav>
-      <div class="burger" aria-label="Menu"><span></span><span></span><span></span></div>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main class="container">
-    <section class="shop-hero card reveal">
+    <section class="section intro soft-card reveal">
       <h1 data-i18n="shop_title">Shop</h1>
-      <p class="muted" data-i18n="shop_sub">Tap a product to flip image. Replace images & prices in HTML.</p>
-      <div class="badges">
-        <span class="badge">Free Shipping $75+</span>
-        <span class="badge">30-Day Returns</span>
-        <span class="badge">Secure Checkout</span>
+      <p class="muted" data-i18n="shop_sub_gamer">
+        Official LINE sticker sets are available now. Apparel and more gamer merch coming soon.
+      </p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="stickers" id="stickers" role="tab" data-i18n="tab_stickers">LINE Stickers</button>
+        <button class="tab" data-tab="apparel" id="apparel" role="tab" data-i18n="tab_apparel">Apparel (Soon)</button>
       </div>
     </section>
 
-    <section class="products">
-      <!-- Product Template -->
-      <article class="product reveal">
-        <div class="pill sale">SALE</div>
-        <div class="thumb">
-          <img class="img1" src="https://picsum.photos/seed/a/800/800" alt="Creator Tee" loading="lazy">
-          <img class="img2" src="https://picsum.photos/seed/a2/800/800" alt="Creator Tee alt" loading="lazy">
+    <section class="products" id="products">
+      <!-- LINE Stickers -->
+      <article class="product soft-card reveal" data-category="stickers">
+        <span class="badge line">LINE</span>
+        <div class="thumb" title="Click to flip image">
+          <!-- ใส่รูปพรีวิวของแพ็กสติ๊กเกอร์ของคุณเองภายหลัง -->
+          <img class="img1" src="https://picsum.photos/seed/line1/900/900" alt="LINE Stickers Set 1" loading="lazy">
+          <img class="img2" src="https://picsum.photos/seed/line1b/900/900" alt="LINE Stickers Set 1 alt" loading="lazy">
         </div>
         <div class="info">
           <div class="row">
-            <div class="title">Creator Tee</div>
-            <div class="rating" aria-label="4.6 out of 5">
-              ★★★★★
-              <span class="rating-fill" style="width:92%"></span>
-              <span class="rating-count">(214)</span>
-            </div>
+            <h3 class="title" data-i18n="sticker_set1_title">Sticker Set 1</h3>
+            <div class="rating" aria-label="5 out of 5">★★★★★<span class="rating-fill" style="width:100%"></span></div>
           </div>
-          <div class="price-row">
-            <span class="price" data-price="24.9"></span>
-            <s class="compare" data-price="32"></s>
-          </div>
-          <div class="meta">
-            <span class="stock in">In stock</span> · <span class="ship">Ships in 24h</span>
-          </div>
+          <p class="meta" data-i18n="sticker_set_desc">Use my signature reactions from the stream!</p>
           <div class="cta-row">
-            <button class="btn" onclick="alert('Add to cart coming soon')">Add to cart</button>
-            <a class="link" href="#" onclick="alert('Quick view'); return false;">Quick view</a>
+            <a class="btn" href="https://store.line.me/stickershop/product/30372109/en" target="_blank" rel="noopener" data-i18n="buy_on_line">Buy on LINE Store</a>
+            <a class="link" href="https://store.line.me/stickershop/product/30372109/en" target="_blank" rel="noopener" data-i18n="view_details">View details</a>
           </div>
         </div>
       </article>
 
-      <article class="product reveal">
-        <div class="thumb">
-          <img class="img1" src="https://picsum.photos/seed/b/800/800" alt="Logo Hoodie" loading="lazy">
-          <img class="img2" src="https://picsum.photos/seed/b2/800/800" alt="Logo Hoodie alt" loading="lazy">
+      <article class="product soft-card reveal" data-category="stickers">
+        <span class="badge line">LINE</span>
+        <div class="thumb" title="Click to flip image">
+          <img class="img1" src="https://picsum.photos/seed/line2/900/900" alt="LINE Stickers Set 2" loading="lazy">
+          <img class="img2" src="https://picsum.photos/seed/line2b/900/900" alt="LINE Stickers Set 2 alt" loading="lazy">
         </div>
         <div class="info">
           <div class="row">
-            <div class="title">Logo Hoodie</div>
-            <div class="rating" aria-label="5 out of 5">
-              ★★★★★
-              <span class="rating-fill" style="width:100%"></span>
-              <span class="rating-count">(89)</span>
-            </div>
+            <h3 class="title" data-i18n="sticker_set2_title">Sticker Set 2</h3>
+            <div class="rating" aria-label="4.8 out of 5">★★★★★<span class="rating-fill" style="width:96%"></span></div>
           </div>
-          <div class="price-row">
-            <span class="price" data-price="44.9"></span>
-          </div>
-          <div class="meta">
-            <span class="stock in">In stock</span> · <span class="ship">Ships in 24h</span>
-          </div>
+          <p class="meta" data-i18n="sticker_set_desc2">Fresh emotes and inside jokes from my channel.</p>
           <div class="cta-row">
-            <button class="btn" onclick="alert('Add to cart coming soon')">Add to cart</button>
-            <a class="link" href="#" onclick="alert('Quick view'); return false;">Quick view</a>
+            <a class="btn" href="https://store.line.me/stickershop/product/31896752/en" target="_blank" rel="noopener" data-i18n="buy_on_line">Buy on LINE Store</a>
+            <a class="link" href="https://store.line.me/stickershop/product/31896752/en" target="_blank" rel="noopener" data-i18n="view_details">View details</a>
           </div>
         </div>
       </article>
 
-      <article class="product reveal">
+      <!-- Apparel placeholder -->
+      <article class="product soft-card reveal hidden" data-category="apparel">
+        <span class="badge soon" data-i18n="coming_soon">Coming Soon</span>
         <div class="thumb">
-          <img class="img1" src="https://picsum.photos/seed/c/800/800" alt="Sticker Pack" loading="lazy">
-          <img class="img2" src="https://picsum.photos/seed/c2/800/800" alt="Sticker Pack alt" loading="lazy">
+          <img class="img1" src="https://picsum.photos/seed/tee/900/900" alt="Creator Tee preview" loading="lazy">
+          <img class="img2" src="https://picsum.photos/seed/tee2/900/900" alt="Creator Tee alt" loading="lazy">
         </div>
         <div class="info">
           <div class="row">
-            <div class="title">Sticker Pack</div>
-            <div class="rating" aria-label="4.2 out of 5">
-              ★★★★★
-              <span class="rating-fill" style="width:84%"></span>
-              <span class="rating-count">(312)</span>
-            </div>
+            <h3 class="title" data-i18n="apparel_tee">Creator Tee</h3>
+            <div class="rating" aria-label="5 out of 5">★★★★★<span class="rating-fill" style="width:100%"></span></div>
           </div>
-          <div class="price-row">
-            <span class="price" data-price="6.9"></span>
-          </div>
-          <div class="meta">
-            <span class="stock in">In stock</span> · <span class="ship">Ships in 24h</span>
-          </div>
+          <p class="meta" data-i18n="notify_when_drop">Merch drops soon — stay tuned!</p>
           <div class="cta-row">
-            <button class="btn" onclick="alert('Add to cart coming soon')">Add to cart</button>
-            <a class="link" href="#" onclick="alert('Quick view'); return false;">Quick view</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="product reveal">
-        <div class="thumb">
-          <img class="img1" src="https://picsum.photos/seed/d/800/800" alt="Cap" loading="lazy">
-          <img class="img2" src="https://picsum.photos/seed/d2/800/800" alt="Cap alt" loading="lazy">
-        </div>
-        <div class="info">
-          <div class="row">
-            <div class="title">Cap</div>
-            <div class="rating" aria-label="4.8 out of 5">
-              ★★★★★
-              <span class="rating-fill" style="width:96%"></span>
-              <span class="rating-count">(54)</span>
-            </div>
-          </div>
-          <div class="price-row">
-            <span class="price" data-price="19.9"></span>
-          </div>
-          <div class="meta">
-            <span class="stock low">Low stock</span> · <span class="ship">Ships in 24h</span>
-          </div>
-          <div class="cta-row">
-            <button class="btn" onclick="alert('Add to cart coming soon')">Add to cart</button>
-            <a class="link" href="#" onclick="alert('Quick view'); return false;">Quick view</a>
+            <a class="btn btn-disabled" href="#" onclick="return false;" data-i18n="notify_me">Notify me (soon)</a>
           </div>
         </div>
       </article>
@@ -171,34 +118,6 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <a href="shop.html">All Products</a>
-        <a href="#">New Arrivals</a>
-        <a href="#">Best Sellers</a>
-      </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <a href="#">Shipping</a>
-        <a href="#">Returns</a>
-        <a href="#">Support</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
-      </div>
-      <div class="footer-col">
-        <h4>Newsletter</h4>
-        <form class="newsletter" onsubmit="event.preventDefault(); alert('Subscribed!');">
-          <input class="input" type="email" placeholder="Email address">
-          <button class="btn" type="submit">Subscribe</button>
-        </form>
-        <div class="pay-logos">VISA · MasterCard · AmEx · PayPal</div>
-      </div>
-    </div>
     <div class="container foot-note">
       <small data-i18n="footer">© 2025 My Channel. All rights reserved.</small>
     </div>
