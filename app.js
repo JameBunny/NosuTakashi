@@ -95,6 +95,15 @@ function applyLang(lang){
   if (select) select.value = lang;
 }
 
+// Format prices as USD like US shops
+function formatPricesUSD(){
+  const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  document.querySelectorAll('.price[data-price], .compare[data-price]').forEach(el=>{
+    const raw = parseFloat(el.getAttribute('data-price'));
+    if (!isNaN(raw)) el.textContent = fmt.format(raw);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', ()=>{
   const saved = localStorage.getItem('lang') || (navigator.language || 'en').slice(0,2);
   const lang = ['en','th','ja'].includes(saved) ? saved : 'en';
@@ -104,6 +113,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // Shop flip logic
   document.querySelectorAll('.product').forEach(card=>{
-    card.addEventListener('click', ()=> card.classList.toggle('active'));
+    card.addEventListener('click', e=>{
+      // Avoid toggling when clicking on buttons/links
+      if (e.target.closest('.btn') || e.target.closest('.link')) return;
+      card.classList.toggle('active');
+    });
   });
+
+  formatPricesUSD();
 });
