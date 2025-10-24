@@ -4,20 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Channel – Home</title>
-  <meta name="description" content="YouTube creator website with shop, contact and about pages.">
-  <link rel="preconnect" href="https://www.youtube.com">
-  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <meta name="description" content="Gamer caster hub: YouTube, LINE stickers, merch, contact.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/favicon.png">
   <script defer src="app.js"></script>
 </head>
-<body>
-  <!-- US-style promo topbar -->
+<body class="light">
   <div class="topbar">
-    🇺🇸 <span>Free shipping over $75</span> · <span>30-day free returns</span> · <span>Secure checkout</span>
+    <span>Free shipping $75+</span><span>30-day returns</span><span>Secure checkout</span>
   </div>
 
-  <!-- Floating social bar -->
   <aside class="floating-bar" aria-label="Quick social links">
     <img src="assets/floating-bar.png" alt="Social bar">
     <div class="floating-links">
@@ -30,10 +26,9 @@
 
   <header class="header">
     <div class="container nav">
-      <div class="brand">
-        <div class="logo"></div>
-        <span>My Channel</span>
-      </div>
+      <a class="brand" href="index.html">
+        <div class="logo"></div><span>My Channel</span>
+      </a>
       <nav class="menu">
         <a href="index.html" class="active" data-i18n="nav_home">Home</a>
         <a href="shop.html" data-i18n="nav_shop">Shop</a>
@@ -45,68 +40,60 @@
           <option value="ja">日本語</option>
         </select>
       </nav>
-      <div class="burger" aria-label="Menu"><span></span><span></span><span></span></div>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <div class="card reveal">
-        <h1 data-i18n="hero_title">Welcome to my YouTube hub</h1>
-        <p data-i18n="hero_sub">Watch my latest videos, shop official merch, and get in touch — all in one place.</p>
-        <a class="btn" href="shop.html" data-i18n="hero_cta">Visit the Shop</a>
-        <!-- Trust row like US stores -->
-        <div class="trust-row">
-          <div>✓ Free Shipping $75+</div>
-          <div>✓ 30-Day Returns</div>
-          <div>✓ Secure Checkout</div>
+      <div class="hero-copy reveal">
+        <h1 data-i18n="hero_title">I’m a gamer caster — watch, support, and collect my LINE stickers!</h1>
+        <p class="muted" data-i18n="hero_sub">
+          Catch my latest gaming videos and grab official goodies. Start with my LINE sticker sets below.
+        </p>
+        <div class="cta-pair">
+          <a class="btn" href="shop.html" data-i18n="hero_cta_shop">Visit the Shop</a>
+          <a class="btn btn-outline" href="shop.html#stickers" data-i18n="hero_cta_stickers">Get LINE Stickers</a>
         </div>
+        <ul class="trust">
+          <li>Free Shipping $75+</li>
+          <li>30-Day Returns</li>
+          <li>Secure Checkout</li>
+        </ul>
       </div>
-      <div class="reveal">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=GoogleDevelopers"
-                  title="YouTube video player" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      <div class="hero-media reveal">
+        <div class="video-wrap soft-card">
+          <iframe
+            src="https://www.youtube.com/embed?listType=user_uploads&list=GoogleDevelopers"
+            title="YouTube video player" frameborder="0" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </section>
 
-    <h2 class="reveal" data-i18n="latest_videos">Latest videos</h2>
-    <div class="grid">
-      <div class="card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1"></iframe></div></div>
-      <div class="card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video 2"></iframe></div></div>
-      <div class="card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Video 3"></iframe></div></div>
-    </div>
+    <section class="section">
+      <h2 class="section-title reveal" data-i18n="latest_videos">Latest videos</h2>
+      <div class="grid videos">
+        <div class="soft-card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1"></iframe></div></div>
+        <div class="soft-card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video 2"></iframe></div></div>
+        <div class="soft-card reveal"><div class="video-wrap"><iframe loading="lazy" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Video 3"></iframe></div></div>
+      </div>
+    </section>
+
+    <section class="section soft-card highlight-stickers reveal">
+      <div class="highlight-copy">
+        <h3 data-i18n="highlight_title">Featured: My LINE Stickers</h3>
+        <p class="muted" data-i18n="highlight_body">
+          Love my streams? Grab these official LINE sticker sets to use with your friends.
+        </p>
+        <div class="highlight-actions">
+          <a class="btn" href="shop.html#stickers" data-i18n="browse_stickers">Browse Stickers</a>
+          <a class="btn btn-outline" href="shop.html#apparel" data-i18n="coming_apparel">Apparel (Coming Soon)</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <a href="shop.html">All Products</a>
-        <a href="#">New Arrivals</a>
-        <a href="#">Best Sellers</a>
-      </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <a href="#">Shipping</a>
-        <a href="#">Returns</a>
-        <a href="#">Support</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Cookie Policy</a>
-      </div>
-      <div class="footer-col">
-        <h4>Newsletter</h4>
-        <form class="newsletter" onsubmit="event.preventDefault(); alert('Subscribed!');">
-          <input class="input" type="email" placeholder="Email address">
-          <button class="btn" type="submit">Subscribe</button>
-        </form>
-        <div class="pay-logos">VISA · MasterCard · AmEx · PayPal</div>
-      </div>
-    </div>
     <div class="container foot-note">
       <small data-i18n="footer">© 2025 My Channel. All rights reserved.</small>
     </div>
